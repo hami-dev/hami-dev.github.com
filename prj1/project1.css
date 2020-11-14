@@ -1,0 +1,336 @@
+:root {
+    --colorPink: #f3d1dd;
+    --colorYellow: #fceecf;
+    --colorYellow2: #fad483;
+    --colorGreen: #cfe7bd;
+    --colorBlue: #b0dee4;
+    --colorLightGray: #e3e6eb;
+    --colorGray: #c8d0d8;
+    --colorDarkGray: #707070;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.header h1 {
+    margin-top: 0;
+    font-size: 60px;
+    padding-left: 10px;
+}
+
+
+.header .header__column {
+    padding-left: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__nav span {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    display: block;
+    color: var(--colorGray);
+    font-weight: bold;
+}
+
+.header__nav li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.threeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid .grid__item {
+    display: flex;
+    background-size: cover;
+    background-position: center center;
+    padding: 10px;
+}
+
+.grid {
+    grid-auto-rows: 20vh;
+    grid-gap: 10px;
+}
+
+.grid .grid__content {
+    font-size: 0.9em;
+}
+
+.grid .grid__item:first-child {
+    grid-row: span 2;
+    background-color: var(--colorBlue);
+
+    & .grid__comment {
+        display: grid;
+        grid-template-rows: 1fr 1fr 4fr 1fr;
+
+        & .grid__subject {
+            color: var(--colorDarkGray);
+            text-decoration: underline;
+        }
+
+        & .grid__title {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        & .grid__content {
+            color: var(--colorDarkGray);
+        }
+
+        & .grid__readmore {
+            color: var(--colorDarkGray);
+            align-self: flex-end;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.grid .grid__item:nth-child(2) {
+    grid-area: span 2 / span 2;
+    background-image: url(https://cdn.pixabay.com/photo/2017/09/09/18/25/living-room-2732939_960_720.jpg);
+}
+
+.grid .grid__item:nth-child(3) {
+    background-color: var(--colorGreen);
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+
+    & .grid__subject {
+        color: var(--colorDarkGray);
+        text-decoration: underline;
+    }
+
+    & .grid__content {
+        color: var(--colorDarkGray);
+    }
+}
+
+.grid__item:nth-child(4) {
+    grid-row: span 2;
+    background-image: url(https://cdn.pixabay.com/photo/2015/09/04/23/29/minimal-923194_960_720.jpg);
+}
+
+.grid .grid__item:nth-child(5) {
+    background-color: var(--colorYellow);
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+
+    & .grid__subject {
+        color: var(--colorDarkGray);
+        text-decoration: underline;
+    }
+
+    & .grid__content {
+        color: var(--colorDarkGray);
+    }
+}
+
+.grid .grid__item:nth-child(6) {
+    background-color: var(--colorLightGray);
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+
+    & .grid__subject {
+        color: var(--colorDarkGray);
+        text-decoration: underline;
+    }
+
+    & .grid__content {
+        color: var(--colorDarkGray);
+    }
+
+    & .grid__readmore {
+        color: var(--colorDarkGray);
+        align-self: flex-end;
+        text-decoration: underline;
+    }
+}
+
+.grid .grid__item:nth-child(7) {
+    background-color: var(--colorGray);
+    display: flex;
+    justify-content: space-around;
+
+    & .grid__content {
+        font-size: 50px;
+        align-self: center;
+        line-height: 100%;
+        text-align: center;
+
+        & span {
+            font-size: 30px;
+        }
+    }
+}
+
+.grid__item:nth-child(8) {
+    grid-area: span 2 / span 2;
+    background-color: var(--colorPink);
+
+    & .grid__comment {
+        display: grid;
+        grid-template-rows: 1fr 1fr 4fr 1fr;
+
+        & .grid__subject {
+            color: var(--colorDarkGray);
+            text-decoration: underline;
+        }
+
+        & .grid__title {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        & .grid__content {
+            color: var(--colorDarkGray);
+        }
+
+        & .grid__readmore {
+            color: var(--colorDarkGray);
+            align-self: flex-end;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.grid__item:nth-child(9) {
+    grid-row: span 2;
+    background-image: url(https://cdn.pixabay.com/photo/2017/10/04/14/50/staging-2816464_960_720.jpg);
+}
+
+.grid__item:nth-child(10) {
+    grid-area: span 2 / span 2;
+    background-image: url(https://cdn.pixabay.com/photo/2016/01/23/23/52/dining-room-1158266_960_720.jpg);
+}
+
+.grid__item:nth-child(11) {
+    background-image: url(https://cdn.pixabay.com/photo/2014/05/21/15/49/book-shelf-349934_960_720.jpg);
+}
+
+.grid__item:nth-child(12) {
+    background-color: var(--colorBlue);
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+
+    & .grid__subject {
+        color: var(--colorDarkGray);
+        text-decoration: underline;
+    }
+
+    & .grid__content {
+        color: var(--colorDarkGray);
+    }
+
+    & .grid__readmore {
+        color: var(--colorDarkGray);
+        align-self: flex-end;
+        text-decoration: underline;
+    }
+}
+
+.grid__item:nth-child(13) {
+    grid-area: span 2 / span 2;
+    background-color: var(--colorGreen);
+
+    & .grid__comment {
+        display: grid;
+        grid-template-rows: 1fr 1fr 4fr 1fr;
+
+        & .grid__subject {
+            color: var(--colorDarkGray);
+            text-decoration: underline;
+        }
+
+        & .grid__title {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        & .grid__content {
+            color: var(--colorDarkGray);
+        }
+    }
+}
+
+.grid__item:nth-child(14) {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/05/01/lights-1867437_960_720.jpg);
+}
+
+.grid__item:last-child {
+    background-color: var(--colorYellow);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+
+    & .grid__subject {
+        color: var(--colorDarkGray);
+        text-decoration: underline;
+    }
+
+    & form {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+
+
+        & .grid__input {
+            height: 30px;
+            align-self: center;
+            border: none;
+            display: block;
+        }
+
+
+        & .grid__input::placeholder {
+            color: var(--colorGray);
+        }
+
+        & .grid__btn {
+            height: 40px;
+            align-self: flex-start;
+            background-color: var(--colorYellow2);
+            color: white;
+            box-shadow: 1px 1px 1px var(--colorLightGray);
+            border: none;
+            text-align: left;
+            display: block;
+
+        }
+    }
+}
+
+
+
+
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    justify-items: center;
+    color: gray;
+}
+
+.footer__comment {
+    text-align: center;
+}
