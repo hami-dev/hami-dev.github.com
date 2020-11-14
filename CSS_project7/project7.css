@@ -1,0 +1,111 @@
+:root {
+    --colorLightgray: rgb(238, 238, 238);
+    --colorgray: rgb(195, 195, 195);
+    --colorDarkgray: rgb(160, 160, 160);
+    --colorBlue: rgb(87, 157, 255);
+}
+
+html, body, ul { 
+    margin: 0;
+    padding: 0;
+}
+
+
+.section__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+
+.section__header span, svg {
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.section__album {
+    background-color: var(--colorLightgray);
+    height: 35vh;
+    padding: 0 10em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+.section__album .photo {
+    margin: 5vh 0;
+    background-position: center center;
+    background-size: cover;
+}
+
+.section__album .photo:nth-child(1) {
+    background-image: url(https://cdn.pixabay.com/photo/2018/04/12/21/24/art-3314849__340.jpg);
+}
+
+.section__album .photo:nth-child(2) {
+    background-image: url(https://cdn.pixabay.com/photo/2019/04/26/17/47/color-4158152__340.jpg);
+
+}
+
+.section__album .photo:nth-child(3) {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/15/10/21/painting-1825855__340.jpg);
+}
+
+.section__text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4em;
+    padding: 40px 10em 0;
+}
+
+.text__column .text__title {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.text__column .text__datalist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    width: 70%;
+    padding: 20px 0;
+}
+
+.text__datalist .datalist__name {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.text__datalist .datalist__value {
+    color: var(--colorDarkgray);
+}
+
+.text__column .text__content {
+    color: var(--colorgray);
+    padding: 30px 0;
+}
+
+.text__column .go__back {
+    border-bottom: 2px solid var(--colorBlue);
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.language {
+    transform: rotate(270deg);
+    position: absolute;
+    right: 10px;
+    bottom: 10vh;
+}
+
+.language .lan_select {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.language .eng {
+    color: var(--colorgray);
+}

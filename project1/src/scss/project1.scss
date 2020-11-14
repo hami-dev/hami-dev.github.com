@@ -1,0 +1,130 @@
+@import "_variables";
+
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: $bgLightgray;
+}
+
+
+// left side nav 
+.header {
+    width: $headerWidth;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $colorRed;
+}
+
+.header__title {
+    span {
+        font-size: 4em;
+        display: block;
+        line-height: 0.9em;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+    }
+}
+
+.header__subtitle {
+    margin-top: 15vh;
+    font-size: 1.5em;
+}
+
+.header__discription {
+    font-weight: 500;
+}
+
+.header__btns {
+    list-style: none;
+    color: $colorDarkGray;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+
+    li {
+        border-bottom: 1px solid $colorDarkGray;
+        padding-bottom: 3px;
+        margin: 5px;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+
+// main
+main {
+    margin-left: $headerWidth;
+    color: white;
+}
+
+.movie {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.15) 2%,
+        transparent,
+        transparent,
+        transparent,
+        transparent
+    )
+    $colorRed;
+}
+
+.wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    .movie__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    
+        div:first-child {
+            font-size: 1.5em;
+        }
+    
+        span {
+            display: block;
+            text-align: right;
+        }
+    }
+
+    .movie__poster {
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        height: 50vh;
+        box-shadow: 0 80px 80px -80px #000;
+    }
+}
+
+.movie:nth-child(1) .movie__poster {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/22/21/47/architecture-1850732__340.jpg);
+}
+
+.movie:nth-child(2) .movie__poster {
+    background-image: url(https://cdn.pixabay.com/photo/2017/07/25/14/54/rain-2538429__340.jpg);
+}
